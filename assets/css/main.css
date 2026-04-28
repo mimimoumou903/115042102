@@ -520,7 +520,7 @@ input, select, textarea {
 
 .shop-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 
@@ -566,7 +566,7 @@ input, select, textarea {
 /* 平板：3欄 */
 @media screen and (max-width: 1024px) {
   .shop-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -577,7 +577,7 @@ input, select, textarea {
   }
 
   .shop-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 18px;
   }
 
