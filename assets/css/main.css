@@ -41,6 +41,43 @@ h2 {
     text-align: center;
     font-family: "jf openhuninn 2 1";
 }
+
+
+
+/* 桌機原本橫排 */
+.intro-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.intro-section .intro-image p {
+    text-align: center;
+}
+#content .intro-section .intro-image {
+}
+#content .intro-section .intro-image {width:120%; height:120%}
+#content .intro-section .intro-imageimg{transform:scale(1,1);transition:all 1s ease-out}
+#content .intro-section .intro-image img:hover{transform:scale(1.2,1.2);}
+
+
+
+
+/* 手機版（一條式） */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;  /* 改直排 */
+    text-align: center;
+  }
+
+  .intro-section img {
+    width: 80%;       /* 圖片不要太大 */
+    margin: 20px auto;
+  }
+
+  .intro-text {
+    text-align: left; /* 文字還是靠左比較好看 */
+  }
+}
 .container1 {
     width: 88%;
     margin-left: auto;
