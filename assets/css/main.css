@@ -44,40 +44,89 @@ h2 {
 
 
 
-/* 桌機原本橫排 */
+/* ⭐ 桌機版：左右各一半 */
 .intro-section {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
 }
-.intro-section .intro-image p {
-    text-align: center;
+
+.intro-text,
+.intro-image {
+  width: 50%;   /* 重點：各佔一半 */
 }
-#content .intro-section .intro-image {
+
+/* 圖片設定 */
+.intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
-#content .intro-section .intro-image {width:120%; height:120%}
-#content .intro-section .intro-imageimg{transform:scale(1,1);transition:all 1s ease-out}
-#content .intro-section .intro-image img:hover{transform:scale(1.2,1.2);}
 
+/* ⭐ 手機版：一條式 */
+@media screen and (max-width: 768px) {
 
-
-
-/* 手機版（一條式） */
-@media (max-width: 768px) {
   .intro-section {
-    flex-direction: column;  /* 改直排 */
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .intro-section img {
-    width: 80%;       /* 圖片不要太大 */
-    margin: 20px auto;
+
+  .intro-text,
+  .intro-image {
+    width: 100%;   /* 滿版 */
   }
 
   .intro-text {
-    text-align: left; /* 文字還是靠左比較好看 */
+    text-align: center;
+  }
+
+  .intro-image {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .intro-image img {
+    width: 70%;
+    max-width: 260px;
   }
 }
+.intro-image {
+  width: 50%;
+  text-align: center; /* 讓圖片下方文字置中 */
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.intro-image p {
+  text-align: center;
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .intro-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro-image img {
+    width: 75%;
+    max-width: 280px;
+  }
+}
+
+
+
+
+
+
 .container1 {
     width: 88%;
     margin-left: auto;
